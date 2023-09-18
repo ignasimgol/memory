@@ -1,0 +1,108 @@
+main{
+    display: flex;
+    margin: 30px auto 0px auto;
+    width: 800px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    background: #ced4da;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .memory-game {
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    grid-gap: 10px;
+  }
+  
+  
+  .memory-card {
+    width: 100%;
+    height: 100%;
+    margin: 3px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  }
+  
+  .memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+  
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    position: absolute;
+    border-radius: 5px;
+    background: #1C7CCC;
+    backface-visibility: hidden;
+  }
+  
+  .front-face {
+    transform: rotateY(180deg);
+  }
+
+  #contenedorUsuario {
+    margin-left: 20px;
+
+  }
+
+    form{
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+
+    label{
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input{
+        display: inline;
+        font-family: 'Poppins', sans-serif;
+        width: 200px;
+        border: 1px solid #ced4da;
+        padding: 10px;
+        border-radius: 5px 5px 5px 5px;
+        font-weight: 200;
+        font-size: 18px;
+    }
+
+    img{
+        float:left;
+        border: 1px solid #64CCC5;
+        padding: 1px;
+        border-radius: 5px;
+        margin-right: 1px;
+        margin-bottom: 15px;
+        width: 38%;
+    }
+
+    .inputJuego{
+        border-radius: 5px;
+        width: 230px;
+    }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600&display=swap" rel="stylesheet">
+    <title>Pokémon Memory Game</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./img/logopkmn.png" alt="Logo Juego">
+        <h1>- THE MEMORY GAME -</h1>
+    </header>
+
+    <main>
+        <div>
+            <p id="error"></p>
+        </div>
+        <form action="juego.html" id="formEntrada">
+            <div class="itemform">
+                <label for="name">Enter your nick: </label>
+                <input type="text" name="nick" value="@" id="nicka" readonly>
+                <input type="text" name="nick" id="nick" required minlength="2">
+            </div>
+            <div class="itemform">
+                <label for="name">Enter your email: </label>
+                <input type="text" name="email" id="email" placeholder="example@example.com">
+            </div>
+            <div class="itemform">
+                <label for="nick">Size of the game*</label>
+                <select name="tamano" id="tamano" required>
+                    <option value="0">--Please, choose an option--</option>
+                    <option value="3">3x3</option>
+                    <option value="5">5x5</option>
+                   
+                </select>
+            </div>
+            <div class="itemform">
+                <label for="nick">Difficulty of the game*</label>
+                <select name="difficulty" id="difficulty" required>
+                    <option value="0">--Please, choose an option--</option>
+                    <option value="1">Easy</option>
+                    <option value="2">Hard</option>
+                </select>
+            </div>
+
+            <div class="itemform">
+                <p id="obligatorio">*Must</p>
+            </div>
+            <div id="avatar">
+                <label for="avatar">Avatar - Drag your choice</label>
+                <div id="avatarContainer">
+                    <img src="./img/profile1.png" alt="" id="avatarImg">
+                </div>
+            </div>
+            <div id="avatargrid">
+                <div class="avatarItem">
+                    <img src="./img/profile1.png" class="avatarImgItem" alt="" width="60" draggable="true">
+                </div>
+                <div class="avatarItem">
+                    <img src="./img/profile2.png" class="avatarImgItem" alt="" width="60" draggable="true">
+                </div>
+                <div class="avatarItem">
+                    <img src="./img/profile3.png" class="avatarImgItem" alt="" width="60" draggable="true">
+                </div>
+                <div class="avatarItem">
+                    <img src="./img/profile4.png" class="avatarImgItem" alt="" width="60" draggable="true">
+                </div>
+                <div class="avatarItem">
+                    <img src="./img/profile5.png" class="avatarImgItem" alt="" width="60" draggable="true">
+                </div>
+                <div class="avatarItem">
+                    <img src="./img/profile6.png" class="avatarImgItem" alt="" width="60" draggable="true">
+                </div>
+                <div class="avatarItem">
+                    <img src="./img/profile7.png" class="avatarImgItem" alt="" width="60" draggable="true">
+                </div>
+                <div class="avatarItem">
+                    <img src="./img/profile8.png" class="avatarImgItem" alt="" width="60" draggable="true">
+                </div>
+                <div class="avatarItem">
+                    <img src="./img/profile9.png" class="avatarImgItem" alt="" width="60" draggable="true">
+                </div>
+                <div class="avatarItem">
+                    <img src="./img/profile10.png" class="avatarImgItem" alt="" width="60" draggable="true">
+                </div>
+            </div>
+
+           
+            <div class="itemform">
+                <input type="submit" value="PLAY" id="jugar">
+            </div>
+           
+
+        </form>
+    </main>
+
+    <footer>
+        <p>Curso FrontEnd de HTML5, CSS3 & JS</p>
+    </footer>
+    <script src="./js/datosUsuario.js"></script>
+    <script src="./js/script.js"></script>
+    
+</body>
+</html>
