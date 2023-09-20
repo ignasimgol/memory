@@ -31,20 +31,19 @@
                 <input type="text" name="email" id="email" placeholder="example@example.com">
             </div>
             <div class="itemform">
-                <label for="nick">Size of the game*</label>
-                <select name="tamano" id="tamano" required>
-                    <option value="0">--Please, choose an option--</option>
-                    <option value="3">3x3</option>
-                    <option value="5">5x5</option>
-                   
-                </select>
-            </div>
-            <div class="itemform">
                 <label for="nick">Difficulty of the game*</label>
                 <select name="difficulty" id="difficulty" required>
                     <option value="0">--Please, choose an option--</option>
                     <option value="1">Easy</option>
                     <option value="2">Hard</option>
+                </select>
+            </div>
+            <div class="itemform">
+                <label for="nick">Size of the game*</label>
+                <select name="tamano" id="tamano" required>
+                    <option>--Please, choose an option--</option>
+                    <option value="3">3x3</option>
+                    <option value="5">5x5</option>
                 </select>
             </div>
 
@@ -102,8 +101,12 @@
     <footer>
         <p>Curso FrontEnd de HTML5, CSS3 & JS</p>
     </footer>
+
+    <script src="./js/juego.js"></script>
     <script src="./js/datosUsuario.js"></script>
     <script src="./js/script.js"></script>
+   
+   
     
 </body>
 </html>

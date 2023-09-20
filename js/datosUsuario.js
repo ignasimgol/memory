@@ -9,7 +9,8 @@ var nick;
 var tamano;
 var email;
 var geolocalizacionTxt;
-var avatarImg
+var avatarImg;
+
 
 
 /**
@@ -77,3 +78,7 @@ function historicoUsuario(nick){
     historico.push(registroUsuario);
     localStorage.setItem('historico',JSON.stringify(historico));
 }
+
+
+
+
