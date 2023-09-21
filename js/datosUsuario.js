@@ -6,25 +6,16 @@
 
 
 var nick;
-var tamano;
 var email;
 var geolocalizacionTxt;
 var avatarImg;
 
 
+  
 
-/**
- * Almacenar los datos en el sessionStorage
- * @date 2023-08-31
- * @param {HTMLElement} nick nick usuario
- * @param {HTMLElement} tamano tamaño 
- * @param {HTMLElement} email email
- */
-
-function datosUsuario(nick,tamano,email,avatarCont){
+function datosUsuario(nick,email,avatarCont){
 
     sessionStorage.setItem('nick',nick.value);
-    sessionStorage.setItem('tamano',tamano.value);
     sessionStorage.setItem('email',email.value);
     sessionStorage.setItem('geolocalizacionTxt',geolocalizacionTxt);
     sessionStorage.setItem('avatarImg',avatarCont.src);
@@ -34,7 +25,6 @@ function datosUsuario(nick,tamano,email,avatarCont){
 
 function getDatosUsuario(){
     nick = sessionStorage.getItem('nick');
-    tamano = sessionStorage.getItem('tamano');
     email = sessionStorage.getItem('email');
     avatarImg = sessionStorage.getItem('avatarImg');
     
@@ -80,5 +70,18 @@ function historicoUsuario(nick){
 }
 
 
+///////////DIFICULTAD JUEGO///////
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    // Agrega un evento al botón 'jugar' de la página de inicio
+    document.getElementById('jugar').addEventListener('click', function() {
+      // Obtén el valor seleccionado en el select de dificultad
+      const selectedDifficulty = document.getElementById('difficulty').value;
+  
+      // Almacena la dificultad seleccionada en localStorage
+      localStorage.setItem('difficulty', selectedDifficulty);
+  
+      // Redirecciona a la página del juego
+      window.location.href = 'juego.html';
+    });
+  });

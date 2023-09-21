@@ -3,7 +3,6 @@
 // Inicializacion Variables, DOM
 
 var nickInput;
-var tamanoInput;
 var emailInput;
 var formEntrada;
 var error;
@@ -29,14 +28,10 @@ function comprobarForm(event){
         event.preventDefault();
         error.innerText="El campo de NICK no puede comenzar con un numero";
         return false;
-    }else if(tamanoInput.value=="0"){
-        tamanoInput.focus();
-        event.preventDefault();
-        error.innerText="Debes seleccionar un tamaño";
-        return false;
     }
+
     //Informacion es correcta
-    datosUsuario(nickInput, tamanoInput, emailInput,avatarCont);
+    datosUsuario(nickInput, emailInput,avatarCont);
     historicoUsuario(nickInput); 
     return true;
 
@@ -59,7 +54,6 @@ function domCargado(){
     //Captura de todos los elements necesarios
     
     nickInput=document.getElementById("nick");
-    tamanoInput=document.getElementById("tamano");
     emailInput=document.getElementById("email");
     formEntrada=document.getElementById("formEntrada");
     error=document.getElementById("error");
