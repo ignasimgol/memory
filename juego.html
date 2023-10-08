@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego</title>
+    <title>MEMORY - Oak's Disaster</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/juego.css">
 
@@ -14,6 +14,9 @@
         <img class="logo" src="./img/logopkmn.png" alt="Logo Juego">
         <h1>- THE MEMORY GAME -</h1>
     </header>
+    <div>
+        <p id="error"></p>
+    </div>
     <main>
         <section class="memory-game" id="memory-container">
              <div class="memory-card" data-framework="1" id="oak-card">
@@ -122,7 +125,7 @@
         <div id="contenedorUsuario">
             <form id="form_entrada" action="juego.html">
                 <div class="itemform">
-                    <img src="./img/profile1.png" class="avatar" id="avatarImg" width="40">
+                    <img src="./img/profile1.png" class="avatar" alt="" id="avatarImg" width="40">
                     <input type="text" id="nick" value="nick" readonly>
                 </div>
                 <div class="itemform">
@@ -153,7 +156,9 @@
       
 
     <script src="./js/datosUsuario.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/juego.js"></script>
+
     
 </body>
 

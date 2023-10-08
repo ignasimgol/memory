@@ -9,29 +9,34 @@ var nick;
 var email;
 var geolocalizacionTxt;
 var avatarImg;
+var difficulty;
 
 
   
-
-function datosUsuario(nick,email,avatarCont){
-
-    sessionStorage.setItem('nick',nick.value);
-    sessionStorage.setItem('email',email.value);
-    sessionStorage.setItem('geolocalizacionTxt',geolocalizacionTxt);
-    sessionStorage.setItem('avatarImg',avatarCont.src);
-  
-
+function datosUsuario(nick, email, avatarCont, difficulty) {
+    sessionStorage.setItem('nick', nick.value);
+    sessionStorage.setItem('email', email.value);
+    sessionStorage.setItem('difficulty', difficulty.value);
+    sessionStorage.setItem('geolocalizacionTxt', geolocalizacionTxt);
+    sessionStorage.setItem('avatarImg', avatarCont.src);
 }
 
-function getDatosUsuario(){
+function getDatosUsuario() {
     nick = sessionStorage.getItem('nick');
     email = sessionStorage.getItem('email');
+    difficulty = sessionStorage.getItem('difficulty');
     avatarImg = sessionStorage.getItem('avatarImg');
-    
 }
+
+
 
 function comprobacionDatosUsuario(){
     if(nick===null){
+        sessionStorage.setItem('error','No se ha rellenado correctamente el formulario');
+        return false;
+    }
+
+    if(difficulty===0){
         sessionStorage.setItem('error','No se ha rellenado correctamente el formulario');
         return false;
     }
@@ -50,6 +55,7 @@ function datoGeolocalizacion(){
         )
     }
 }
+
 
 //local storage
 
@@ -85,3 +91,16 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = 'juego.html';
     });
   });
+
+  function mostrarMensajeDeError() {
+    const errorDiv = document.getElementById('error');
+    const errorMessage = sessionStorage.getItem('error');
+    if (errorMessage) {
+      errorDiv.textContent = errorMessage;
+    }
+  }
+  
+  // Llama a esta función después de ejecutar comprobacionDatosUsuario
+  mostrarMensajeDeError();
+  
+  

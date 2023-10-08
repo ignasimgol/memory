@@ -1,3 +1,4 @@
+(function() {
 // Variable global para tiradasRestantes
 let tiradasRestantes;
 // Variable global para la dificultad seleccionada
@@ -19,14 +20,14 @@ document.addEventListener('DOMContentLoaded', function () {
   resetAndShuffleCards();
 });
 
-// IDs, etc.
-
-function rellenarFormularioUsuario() {
-  document.getElementById("nick").value = nick;
-  document.getElementById("avatarImg").src = avatarImg;
+// OBTENER NICK E IMAGEN.
+function rellenarFormularioUsuario(){
+  document.getElementById("nick").value=nick;
+  document.getElementById("avatarImg").src=avatarImg;
 }
 
-// MEMORY
+
+// GAME
 
 const cards = document.querySelectorAll('.memory-card');
 
@@ -233,5 +234,12 @@ getDatosUsuario();
 // Comprobamos datos
 if (!comprobacionDatosUsuario()) location = "index.html";
 
-// Rellenar formulario
-rellenarFormularioUsuario();
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Llamar a la función para rellenar el formulario
+  rellenarFormularioUsuario();
+
+  // Otros llamados de funciones relacionadas con el juego aquí
+});
+
+})();

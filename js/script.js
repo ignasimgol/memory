@@ -9,6 +9,7 @@ var error;
 var avatarItems;
 var itemImg;
 var avatarCont;
+var avatarImg;
 
 //Comprobar si hay algun error de juego.html
 
@@ -40,17 +41,20 @@ function comprobarForm(event){
 function moviendoImg(event){
     itemImg=event.target;
     console.log(itemImg.src);
+    console.log("URL de la imagen arrastrada:", itemImg.src);
 }
 
-function cambiarImg(event){
-    avatarCont.src=itemImg.src;
+function cambiarImg(event) {
+    avatarImg = itemImg.src;
+    console.log("Nueva URL del avatarImg:", avatarImg);
+    avatarCont.src = itemImg.src;
 }
 
 /**
  * carga de objetos del DOM comprobaciones y eventos del formulario
  * @date 2023-08-31
  */
-function domCargado(){
+function domCargadoScript(){
     //Captura de todos los elements necesarios
     
     nickInput=document.getElementById("nick");
@@ -69,6 +73,7 @@ function domCargado(){
     formEntrada.addEventListener('submit',comprobarForm);
 
     avatarItems=document.getElementsByClassName("avatarImgItem")
+
     //Eventos del dragandrop
     for(let item of avatarItems){
         item.addEventListener('dragstart',moviendoImg)
@@ -78,8 +83,9 @@ function domCargado(){
     avatarCont.addEventListener('drop',cambiarImg)
 }
 
+
 //Inicio de carga de eventos
-document.addEventListener('DOMContentLoaded',domCargado);
+document.addEventListener('DOMContentLoaded',domCargadoScript);
 
 
 //Geolocalizacion

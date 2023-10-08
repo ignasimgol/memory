@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600&display=swap" rel="stylesheet">
-    <title>Pokémon Memory Game</title>
+    <title>Pokémon Memory Game - Oak's Disaster</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
@@ -22,24 +22,24 @@
         </div>
         <form action="juego.html" id="formEntrada">
             <div class="itemform">
-                <label for="name">Enter your nick: </label>
+                <label for="name">Escribe tu nick*: </label>
                 <input type="text" name="nick" value="@" id="nicka" readonly>
                 <input type="text" name="nick" id="nick" required minlength="2">
             </div>
             <div class="itemform">
-                <label for="name">Enter your email: </label>
+                <label for="name">Escribe tu email: </label>
                 <input type="text" name="email" id="email" placeholder="example@example.com">
             </div>
             <div class="itemform">
-                <label for="nick">Difficulty of the game*</label>
+                <label for="nick">Dificultad del Juego*</label>
                 <select name="difficulty" id="difficulty" required>
-                    <option value="0">--Please, choose an option--</option>
-                    <option value="30">Easy</option>
-                    <option value="20">Hard</option>
+                    <option value="0">--Elige una opción--</option>
+                    <option value="30">Fácil</option>
+                    <option value="20">Difícil</option>
                 </select>
             </div>
             <div class="itemform">
-                <p id="obligatorio">*Must</p>
+                <p id="obligatorio">*Obligatorio</p>
             </div>
             <div id="avatar">
                 <label for="avatar">Avatar - Drag your choice</label>
@@ -80,7 +80,6 @@
                 </div>
             </div>
 
-           
             <div class="itemform">
                 <input type="submit" value="PLAY" id="jugar">
             </div>
@@ -92,17 +91,11 @@
     <footer>
         <p>Curso FrontEnd de HTML5, CSS3 & JS</p>
     </footer>
-
-    <script>
-        // Obtén el elemento select
-        
-    </script>
     
-    <script src="./js/datosUsuario.js"></script>
-    <script src="./js/juego.js"></script>
     <script src="./js/script.js"></script>
-   
-   
+    <script src="./js/datosUsuario.js"></script>
+    
+ 
     
 </body>
 </html>
